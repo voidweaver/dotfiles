@@ -68,7 +68,20 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python extract web-search zsh-autosuggestions vscode systemd colored-man-pages colorize command-not-found compleat safe-paste)
+plugins=(
+	colored-man-pages
+	colorize
+	command-not-found
+	compleat
+	extract
+	git
+	python
+	safe-paste
+	systemd
+	vscode
+   	web-search
+   	zsh-autosuggestions
+)
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777"
 ZSH_COLORIZE_TOOL=chroma
