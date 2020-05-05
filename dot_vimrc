@@ -1,0 +1,26 @@
+set ts=4
+set sts=4
+set sw=4
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-python/python-syntax'
+" Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
+" Plug 'flrnprz/plastic.vim'
+" Plug 'flrnd/candid.vim'
+" Plug 'lithammer/vim-eighties'
+
+call plug#end()
+
+" let g:eighties_italicize_strings = 0
+" let g:eighties_transp_bg = 0
+
+" set background=dark
+syntax on
+colorscheme onedark
+
+" highlight Normal ctermbg=DarkBlue
+
+hi Normal guibg=NONE ctermbg=NONE
+" let g:lightline = { 'colorscheme': 'plastic' }
