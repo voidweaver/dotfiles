@@ -115,13 +115,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias ascii='typeset -g POWERLEVEL9K_MODE=ascii && p10k reload'
+
+alias del=trash
+
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 alias llh='ls -lh'
 alias lh=llh
-
-alias del=trash
 
 alias v=vim
 
@@ -173,5 +175,7 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ ! -f ~/.p10k.root.zsh ]] || source ~/.p10k.root.zsh
+
+[[ ! -f ~/.zshrc.extra ]] || source ~/.zshrc.extra
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
