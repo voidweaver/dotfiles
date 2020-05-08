@@ -78,9 +78,8 @@ antigen bundle safe-paste
 antigen bundle systemd
 antigen bundle vscode
 antigen bundle web-search
-antigen bundle zsh-autosuggestions
 
-# Syntax highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load powerlevel
@@ -110,9 +109,6 @@ antigen apply
 #    	web-search
 #    	zsh-autosuggestions
 # )
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#777"
-ZSH_COLORIZE_TOOL=chroma
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -168,6 +164,9 @@ export EDITOR='vim'
 
 SAVEHIST=5000
 HISTSIZE=5000
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"
+ZSH_COLORIZE_TOOL=chroma
 
 # ----------- KEYBINDS-------------
 # If NumLock is off, translate keys to make them appear the same as with NumLock on.
