@@ -61,8 +61,8 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Install antigen with command
-# curl -L git.io/antigen > ~/antigen.zsh
-source ~/antigen.zsh
+# curl -L git.io/antigen > ~/.antigen.zsh
+source ~/.antigen.zsh
 
 antigen use oh-my-zsh
 
