@@ -201,6 +201,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ ! -f ~/.p10k.root.zsh ]] || source ~/.p10k.root.zsh
+[[ ! -f ~/.p10k.extra.zsh ]] || source ~/.p10k.extra.zsh
 
 [[ ! -f ~/.zshrc.extra ]] || source ~/.zshrc.extra
