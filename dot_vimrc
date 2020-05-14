@@ -9,11 +9,8 @@ set sw=4
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-python/python-syntax'
-" Plug 'itchyny/lightline.vim'
-Plug 'joshdick/onedark.vim'
-" Plug 'flrnprz/plastic.vim'
-" Plug 'flrnd/candid.vim'
-" Plug 'lithammer/vim-eighties'
+" Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -22,7 +19,7 @@ call plug#end()
 
 " set background=dark
 syntax on
-colorscheme onedark
+colorscheme dracula
 
 " highlight Normal ctermbg=DarkBlue
 
