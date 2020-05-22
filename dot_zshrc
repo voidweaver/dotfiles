@@ -149,6 +149,7 @@ alias ll='ls -l'
 alias lla='ls -la'
 alias llh='ls -lh'
 alias lh=llh
+alias l='ls -l'
 
 alias v=vim
 
