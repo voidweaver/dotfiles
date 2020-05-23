@@ -715,7 +715,7 @@
   # RAM color.
   typeset -g POWERLEVEL9K_RAM_FOREGROUND=227
   # Custom icon.
-  # typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_EXPANSION=''
 
   #####################################[ swap: used swap ]######################################
   # Swap color.
@@ -733,7 +733,7 @@
   # Load color when load is over 70%.
   typeset -g POWERLEVEL9K_LOAD_CRITICAL_FOREGROUND=1
   # Custom icon.
-  # typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_LOAD_VISUAL_IDENTIFIER_EXPANSION=''
 
   ################[ todo: todo items (https://github.com/todotxt/todo.txt-cli) ]################
   # Todo color.
@@ -1321,7 +1321,7 @@
   typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=6
   typeset -g POWERLEVEL9K_PUBLIC_IP_NONE='N/A'
   # Custom icon.
-  # typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION=''
 
   ########################[ vpn_ip: virtual private network indicator ]#########################
   # VPN IP color.
