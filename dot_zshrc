@@ -144,6 +144,13 @@ alias ascii='typeset -g POWERLEVEL9K_MODE=ascii && p10k reload'
 
 alias del=trash
 
+if which lsd > /dev/null
+then
+	alias ls='lsd'
+else
+	alias ls='ls --color'
+fi
+
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
