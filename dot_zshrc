@@ -144,19 +144,19 @@ alias ascii='typeset -g POWERLEVEL9K_MODE=ascii && p10k reload'
 
 alias del=trash
 
-if which lsd &> /dev/null
+if ! command -v lsd &> /dev/null
 then
-	alias ls='lsd'
-else
-	alias ls='ls --color'
+	alias lsd='ls --color'
 fi
 
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -la'
-alias llh='ls -lh'
+alias _ls=/usr/bin/ls
+alias ls=lsd
+alias la='lsd -a'
+alias ll='lsd -l'
+alias lla='lsd -la'
+alias llh='lsd -lh'
 alias lh=llh
-alias l='ls -l'
+alias l='lsd -l'
 
 alias v=vim
 
@@ -232,7 +232,7 @@ bindkey "^[[F"  end-of-line
 # ----------- SOURCES -------------
 # Tilix dependency
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+	source /etc/profile.d/vte.sh
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

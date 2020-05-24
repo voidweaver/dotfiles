@@ -343,10 +343,10 @@
     if (( $1 )); then
       # Styling for up-to-date Git status.
       local       meta='%f'     # default foreground
-      local      clean='%76F'   # green foreground
-      local   modified='%178F'  # yellow foreground
+      local      clean='%2F'   # green foreground
+      local   modified='%220F'  # yellow foreground
       local  untracked='%39F'   # blue foreground
-      local conflicted='%196F'  # red foreground
+      local conflicted='%1F'  # red foreground
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
