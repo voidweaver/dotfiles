@@ -256,11 +256,11 @@ bindkey "^[[H"  beginning-of-line
 bindkey "^[[F"  end-of-line
 
 # ----------- SOURCES -------------
-# Source system-specific environments such as the $OWN variable
-[[ ! -f ~/.env.zsh ]] || source ~/.env.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Source device-specific script
+[[ ! -f ~/.zshrc_extra ]] || source ~/.zshrc_extra
 
 # ----------- COMMANDS ------------
 echo
