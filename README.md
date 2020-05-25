@@ -29,7 +29,7 @@ My personal dotfiles repository, managed by [chezmoi](https://github.com/twpayne
     $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
-    **Note**: If you have installed antigen using the official command, you might need to symlink, copy or move your `antigen.zsh` to `~/.antigen.zsh`. Skip this step if you installed antigen using the command above.
+    **Note**: If you have installed antigen using the official command, you might need to symlink, copy, or move your `antigen.zsh` to `~/.antigen.zsh`. Skip this step if you installed antigen using the command above.
     ```shell
     $ ln -s /path/to/antigen.zsh ~/.antigen.zsh
     ```
