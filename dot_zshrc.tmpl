@@ -140,9 +140,9 @@ alias del=trash
 
 if command -v lsd &> /dev/null
 then
-    alias ls=lsd
+	alias ls=lsd
 else
-    alias ls='ls --color'
+	alias ls='ls --color'
 fi
 
 alias _ls=/usr/bin/ls
@@ -159,75 +159,75 @@ alias v=vim
 
 unalias glog
 glog() {
-    setterm -linewrap off
+	setterm -linewrap off
 
-    git --no-pager log --all --color=always --graph --abbrev-commit --decorate \
-        --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | \
-        sed -E \
-            -e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+ /├\1─╮\2/' \
-            -e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m /\1├─╯\x1b\[m/' \
-            -e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+/├\1╮\2/' \
-            -e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m/\1├╯\x1b\[m/' \
-            -e 's/╮(\x1b\[[0-9;]*m)+\\/╮\1╰╮/' \
-            -e 's/╯(\x1b\[[0-9;]*m)+\//╯\1╭╯/' \
-            -e 's/(\||\\)\x1b\[m   (\x1b\[[0-9;]*m)/╰╮\2/' \
-            -e 's/(\x1b\[[0-9;]*m)\\/\1╮/g' \
-            -e 's/(\x1b\[[0-9;]*m)\//\1╯/g' \
-            -e 's/^\*|(\x1b\[m )\*/\1⎬/g' \
-            -e 's/(\x1b\[[0-9;]*m)\|/\1│/g' \
-        | command less -r +'/[^/]HEAD'
+	git --no-pager log --all --color=always --graph --abbrev-commit --decorate \
+		--format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' | \
+		sed -E \
+			-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+ /├\1─╮\2/' \
+			-e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m /\1├─╯\x1b\[m/' \
+			-e 's/\|(\x1b\[[0-9;]*m)+\\(\x1b\[[0-9;]*m)+/├\1╮\2/' \
+			-e 's/(\x1b\[[0-9;]+m)\|\x1b\[m\1\/\x1b\[m/\1├╯\x1b\[m/' \
+			-e 's/╮(\x1b\[[0-9;]*m)+\\/╮\1╰╮/' \
+			-e 's/╯(\x1b\[[0-9;]*m)+\//╯\1╭╯/' \
+			-e 's/(\||\\)\x1b\[m   (\x1b\[[0-9;]*m)/╰╮\2/' \
+			-e 's/(\x1b\[[0-9;]*m)\\/\1╮/g' \
+			-e 's/(\x1b\[[0-9;]*m)\//\1╯/g' \
+			-e 's/^\*|(\x1b\[m )\*/\1⎬/g' \
+			-e 's/(\x1b\[[0-9;]*m)\|/\1│/g' \
+		| command less -r +'/[^/]HEAD'
 
-    setterm -linewrap on
+	setterm -linewrap on
 }
 
 ascii() {
-    P10K_CONFIG_FILE=~/.p10k.zsh
-    if [[ $POWERLEVEL9K_MODE == 'ascii' ]]
-    then
-        source $P10K_CONFIG_FILE
-        echo "Sourced $P10K_CONFIG_FILE"
-        p10k reload
-        echo "Reloaded p10k"
+	P10K_CONFIG_FILE=~/.p10k.zsh
+	if [[ $POWERLEVEL9K_MODE == 'ascii' ]]
+	then
+		source $P10K_CONFIG_FILE
+		echo "Sourced $P10K_CONFIG_FILE"
+		p10k reload
+		echo "Reloaded p10k"
 
-        if command -v lsd &> /dev/null
-        then
-            alias ls=lsd
-        else
-            alias ls='ls --color'
-        fi
-        echo "Re-aliased ls: $(which ls)"
+		if command -v lsd &> /dev/null
+		then
+			alias ls=lsd
+		else
+			alias ls='ls --color'
+		fi
+		echo "Re-aliased ls: $(which ls)"
 
-        return 0
-    fi
+		return 0
+	fi
 
-    ASCII_FILE=~/.p10k_ascii.zsh
-    if [[ -f $ASCII_FILE ]]
-    then
-        if [[ -r $ASCII_FILE ]]
-        then
-            typeset -g POWERLEVEL9K_MODE=ascii
-            source $ASCII_FILE
-            echo "Sourced $ASCII_FILE"
-            p10k reload
-            echo "Reloaded p10k"
+	ASCII_FILE=~/.p10k_ascii.zsh
+	if [[ -f $ASCII_FILE ]]
+	then
+		if [[ -r $ASCII_FILE ]]
+		then
+			typeset -g POWERLEVEL9K_MODE=ascii
+			source $ASCII_FILE
+			echo "Sourced $ASCII_FILE"
+			p10k reload
+			echo "Reloaded p10k"
 
-            if command -v lsd &> /dev/null
-            then
-                alias ls='lsd --icon never'
-            else
-                alias ls='ls --color'
-            fi
-            echo "Re-aliased ls: $(which ls)"
+			if command -v lsd &> /dev/null
+			then
+				alias ls='lsd --icon never'
+			else
+				alias ls='ls --color'
+			fi
+			echo "Re-aliased ls: $(which ls)"
 
-            return 0
-        else
-            echo "File $ASCII_FILE not readable"
-            return 1
-        fi
-    else
-        echo "File $ASCII_FILE not found"
-        return 1
-    fi
+			return 0
+		else
+			echo "File $ASCII_FILE not readable"
+			return 1
+		fi
+	else
+		echo "File $ASCII_FILE not found"
+		return 1
+	fi
 }
 
 # ------------- OPTS --------------
