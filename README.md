@@ -39,7 +39,7 @@ My personal dotfiles repository, managed by [chezmoi](https://github.com/twpayne
     $ vim +PlugInstall +qall
     ```
 
-7. Start a new zsh shell (plugins will be installed automatically)
+7. Start a new zsh shell (plugins will be installed automatically by antigen)
     ```shell
     $ zsh
     ```
