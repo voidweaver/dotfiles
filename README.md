@@ -1,4 +1,4 @@
-# My dotfiles
+# ~/.dotfiles
 
 My personal dotfiles repository, managed by [chezmoi](https://github.com/twpayne/chezmoi).
 
