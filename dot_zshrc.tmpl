@@ -285,5 +285,5 @@ bindkey "^[[F"  end-of-line
 echo
 echo '  \033[1;38;5;45mWelcome back, \033[38;5;215m'$USER'\033[38;5;45m!\033[0m'
 echo
-neofetch --colors {{ .neofetch_colors }}{{ if eq .chezmoi.osRelease.id "arch" }} --ascii_colors 39 33{{ end }}
+neofetch --colors {{ .neofetch_colors }}{{ if eq .chezmoi.osRelease.id "arch" }} --ascii_colors 39 33{{ end }}{{ if not .show_pac_count }} --disable packages{{ end }}
 echo
