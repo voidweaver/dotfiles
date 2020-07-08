@@ -1,3 +1,5 @@
-{{- $own := promptString "(For formatting prompt char) Do you own this device? [true/false]" -}}
+{{ $own := promptString "(For formatting prompt char) Do you own this device? [true/false]" -}}
+{{ $icon_color := promptString "Preferred icon color for this OS [39]" -}}
 [data]
 	own = {{ $own }}
+	os_icon_color = {{ if eq $icon_color "" }}39{{ end }}{{ if ne $icon_color "" }}{{ $icon_color }}{{ end }}
