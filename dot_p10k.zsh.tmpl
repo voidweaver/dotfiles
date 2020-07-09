@@ -181,6 +181,10 @@
 	#################################[ os_icon: os identifier ]##################################
 	# OS identifier color.
 	typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND={{ .os_icon_color }}
+	{{- if eq .chezmoi.osRelease.id "kali" }}
+	# Use text instead of the default linux icon
+	typeset -g POWERLEVEL9K_LINUX_ICON='kali'
+	{{ end }}
 	# Make the icon bold.
 	typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='${P9K_CONTENT}'
 
