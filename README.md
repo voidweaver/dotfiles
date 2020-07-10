@@ -25,7 +25,7 @@ My personal dotfiles repository, managed by [chezmoi](https://github.com/twpayne
     ```
 5. Install [antigen](https://github.com/zsh-users/antigen) and [vim-plug](https://github.com/junegunn/vim-plug) plugin managers
     ```shell
-    $ curl -L git.io/antigen > ~/.antigen.zsh
+    $ curl -fLo ~/.antigen.zsh git.io/antigen
     $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     ```
