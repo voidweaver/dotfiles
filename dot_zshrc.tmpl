@@ -192,10 +192,8 @@ ascii() {
 		if command -v lsd &> /dev/null
 		then
 			alias ls=lsd
-		else
-			alias ls='ls --color'
+			echo "Re-aliased ls: $(which ls)"
 		fi
-		echo "Re-aliased ls: $(which ls)"
 
 		return 0
 	fi
@@ -214,10 +212,8 @@ ascii() {
 			if command -v lsd &> /dev/null
 			then
 				alias ls='lsd --icon never'
-			else
-				alias ls='ls --color'
+				echo "Re-aliased ls: $(which ls)"
 			fi
-			echo "Re-aliased ls: $(which ls)"
 
 			return 0
 		else
