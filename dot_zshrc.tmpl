@@ -141,6 +141,8 @@ alias del=trash
 if command -v lsd &> /dev/null
 then
 	alias ls=lsd
+else
+	unalias ls
 fi
 
 alias ,ls=/usr/bin/ls
