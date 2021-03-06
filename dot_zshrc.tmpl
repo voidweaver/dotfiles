@@ -235,12 +235,6 @@ ascii() {
 
 unsetopt sharehistory
 
-# ----------- EXPORTS -------------
-
-export EDITOR='vim'
-
-export PATH="/home/voidweaver/.yarn/bin:$PATH"
-
 # ----- ENVIRONMENT VARIABLES -----
 
 SAVEHIST=5000
@@ -288,6 +282,9 @@ fi
 
 # Source device-specific script
 [[ ! -f ~/.zshrc_extra ]] || source ~/.zshrc_extra
+
+# ------------- MISC --------------
+typeset -U PATH
 
 # ----------- COMMANDS ------------
 echo
