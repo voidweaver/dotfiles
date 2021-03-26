@@ -1,6 +1,8 @@
 export EDITOR='vim'
 export PATH="$HOME/.yarn/bin:$PATH"
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+BREWPATH="/home/linuxbrew/.linuxbrew/bin/brew"
+
+[[ ! ( -f $BREWPATH && -x $BREWPATH ) ]] || eval $($BREWPATH shellenv)
 
 typeset -U PATH
