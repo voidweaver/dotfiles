@@ -1,0 +1,3 @@
+echo
+echo '  \033[1;38;5;2mWelcome back to \033[1;38;5;13m{{ .chezmoi.osRelease.prettyName }}\033[1;38;5;2m, \033[38;5;11m'$USER'\033[38;5;2m!\033[0m'
+echo
