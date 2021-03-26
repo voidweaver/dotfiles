@@ -1,8 +1,8 @@
-export EDITOR='vim'
-export PATH="$HOME/.yarn/bin:$PATH"
-
 BREWPATH="/home/linuxbrew/.linuxbrew/bin/brew"
-
 [[ ! ( -f $BREWPATH && -x $BREWPATH ) ]] || eval $($BREWPATH shellenv)
 
-typeset -U PATH
+export -U MANPATH INFOPATH
+
+export EDITOR='vim'
+export -U PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
+
